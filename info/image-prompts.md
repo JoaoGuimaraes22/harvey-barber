@@ -179,6 +179,15 @@ Save as: `public/reviews/review-4.jpg`
 
 Save as: `public/reviews/review-5.jpg`
 
+### review-6.webp
+- **Used in**: Reviews section, Mariano Poggi's review card
+- **Display size**: aspect-[4/3], ~600x450
+- **Alt text**: Mariano Poggi's haircut
+
+> Professional photograph of a young South American man in his late 20s with a fresh modern textured haircut — short sides, longer styled top. First-time client, pleasantly surprised expression. In a barbershop setting, warm amber lighting, dark background. Shot from chest up, slight angle. Warm gold tones, editorial portrait photography. No text, no watermarks.
+
+Save as: `public/reviews/review-6.jpg`
+
 ---
 
 ## Gallery (8 images)
@@ -250,6 +259,60 @@ Save as: `public/gallery/gallery-7.jpg`
 
 Save as: `public/gallery/gallery-8.jpg`
 
+### gallery-9.webp
+- **Used in**: Gallery grid
+- **Display size**: aspect-[3/2], ~600x400
+
+> Detail shot of a classic barber chair in a dark barbershop. Chrome and leather details catching warm amber light. Shallow depth of field, mirror reflection visible in background. Moody, cinematic still life. Editorial interior photography. No text, no watermarks.
+
+Save as: `public/gallery/gallery-9.jpg`
+
+### gallery-10.webp
+- **Used in**: Gallery grid
+- **Display size**: aspect-[3/2], ~600x400
+
+> Two barbers working simultaneously on different clients in a barbershop. Shot from a wide angle showing the busy, warm atmosphere. Both focused on their craft. Warm amber lighting, dark interior. Documentary editorial photography capturing the energy of the space. No text, no watermarks.
+
+Save as: `public/gallery/gallery-10.jpg`
+
+### gallery-11.webp
+- **Used in**: Gallery grid
+- **Display size**: aspect-[3/2], ~600x400
+
+> Over-the-shoulder shot of a man looking at his fresh haircut in the barbershop mirror, satisfied expression visible in the reflection. Barber standing behind removing the cape. Warm amber lighting, classic barbershop mirrors. Intimate, editorial moment. No text, no watermarks.
+
+Save as: `public/gallery/gallery-11.jpg`
+
+### gallery-12.webp
+- **Used in**: Gallery grid
+- **Display size**: aspect-[3/2], ~600x400
+
+> Close-up of barbershop shelf details — aftershave bottles, a vintage clock, combs in blue sanitizer liquid, and a small movie car model. Warm amber side lighting creating dramatic shadows. Shallow depth of field. Character details that tell the shop's story. No text, no watermarks.
+
+Save as: `public/gallery/gallery-12.jpg`
+
+---
+
+## Team (2 images)
+
+### harvey.webp
+- **Used in**: Team section, Harvey's card
+- **Display size**: aspect-[3/4], ~500x667 portrait
+- **Alt text**: Harvey
+
+> Environmental portrait of a Portuguese man in his 50s-60s, the owner of a men's barbershop. Standing confidently in his shop, arms relaxed. Warm, welcoming expression — a man who's been doing this for 30+ years. Wearing a classic barber's apron or polo shirt. Barbershop interior visible in background (chairs, mirrors, warm lighting). Dark moody atmosphere with warm amber tones. Shallow depth of field. Editorial portrait photography. No text, no watermarks.
+
+Save as: `public/team/harvey.jpg`
+
+### david.webp
+- **Used in**: Team section, David's card
+- **Display size**: aspect-[3/4], ~500x667 portrait
+- **Alt text**: David
+
+> Environmental portrait of a Portuguese man in his early 40s, a skilled barber known as "the artist". Mid-action or holding barbershop tools (scissors, comb). Focused, confident expression. Standing in a barbershop setting with warm amber lighting and dark walls. Wearing a modern barber's apron. Shallow depth of field, cinematic warm tones. Editorial portrait photography. No text, no watermarks.
+
+Save as: `public/team/david.jpg`
+
 ---
 
 ## Summary
@@ -262,7 +325,8 @@ Save as: `public/gallery/gallery-8.jpg`
 | Before/After | 6 | `/before-after/before-1..3.jpg`, `after-1..3.jpg` |
 | Reviews | 5 | `/reviews/review-1..5.jpg` |
 | Gallery | 8 | `/gallery/gallery-1..8.jpg` |
-| **Total** | **25** | |
+| Team | 2 | `/team/harvey.webp`, `david.webp` |
+| **Total** | **27** | |
 
 **Not generated (provided by client):**
 - `/hero/hero-video.mp4` — mobile hero video (shot by client on mobile)

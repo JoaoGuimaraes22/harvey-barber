@@ -1,12 +1,14 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState, useCallback, useEffect } from "react";
 import { motion, useInView } from "motion/react";
 import Image from "next/image";
 
 type ReviewsDict = {
   badge: string;
   title: string;
+  more: string;
+  less: string;
   items: { name: string; rating: number; text: string; image: string }[];
 };
 
@@ -54,8 +56,11 @@ export default function Reviews({ dict }: { dict: ReviewsDict }) {
           <span className="text-gold">.</span>
         </motion.h2>
 
-        {/* Review cards — top row 3, bottom row 2 centered */}
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {/* Mobile: horizontal slider */}
+        <MobileSlider items={dict.items} inView={inView} labels={{ more: dict.more, less: dict.less }} />
+
+        {/* Desktop: 3x2 grid */}
+        <div className="hidden gap-6 md:grid md:grid-cols-2 lg:grid-cols-3">
           {dict.items.map((review, i) => (
             <motion.div
               key={i}
@@ -66,52 +71,154 @@ export default function Reviews({ dict }: { dict: ReviewsDict }) {
                 delay: 0.2 + i * 0.1,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className={`group relative overflow-hidden rounded-sm border border-gold/10 bg-background transition-colors hover:border-gold/25 ${
-                i >= 3 ? "lg:col-span-1 lg:first-of-type:col-start-1" : ""
-              }`}
+              className="group overflow-hidden rounded-sm border border-gold/10 bg-background transition-colors hover:border-gold/25"
             >
-              {/* Result photo */}
-              <div className="relative aspect-[4/3] overflow-hidden">
-                <Image
-                  src={review.image}
-                  alt={`${review.name}'s haircut`}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                />
-                {/* Gradient overlay at bottom for text readability */}
-                <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
-
-                {/* Stars overlaid on image bottom-left */}
-                <div className="absolute bottom-3 left-4 flex gap-0.5">
-                  {Array.from({ length: review.rating }).map((_, s) => (
-                    <span key={s} className="text-sm text-gold drop-shadow-md">
-                      &#9733;
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* Text content */}
-              <div className="relative p-6">
-                {/* Decorative quotation mark */}
-                <span className="absolute -top-3 right-4 font-display text-5xl leading-none text-gold/10">
-                  &ldquo;
-                </span>
-
-                <p className="relative mb-4 text-sm leading-relaxed text-foreground/60">
-                  {review.text}
-                </p>
-
-                {/* Reviewer name */}
-                <p className="text-xs font-semibold uppercase tracking-[0.15em] text-gold/80">
-                  {review.name}
-                </p>
-              </div>
+              <ReviewCard review={review} />
             </motion.div>
           ))}
         </div>
       </div>
     </section>
+  );
+}
+
+function MobileSlider({
+  items,
+  inView,
+  labels,
+}: {
+  items: { name: string; rating: number; text: string; image: string }[];
+  inView: boolean;
+  labels: { more: string; less: string };
+}) {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [active, setActive] = useState(0);
+
+  const onScroll = useCallback(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const scrollLeft = el.scrollLeft;
+    const cardWidth = el.scrollWidth / items.length;
+    setActive(Math.round(scrollLeft / cardWidth));
+  }, [items.length]);
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    el.addEventListener("scroll", onScroll, { passive: true });
+    return () => el.removeEventListener("scroll", onScroll);
+  }, [onScroll]);
+
+  return (
+    <div className="md:hidden">
+      <div
+        ref={scrollRef}
+        className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide"
+      >
+        {items.map((review, i) => (
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, y: 40 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{
+              duration: 0.7,
+              delay: 0.2 + i * 0.08,
+              ease: [0.16, 1, 0.3, 1],
+            }}
+            className="group w-[80vw] min-w-[80vw] snap-center overflow-hidden rounded-sm border border-gold/10 bg-background"
+          >
+            <ReviewCard review={review} compact labels={labels} />
+          </motion.div>
+        ))}
+      </div>
+      {/* Scroll indicator dots */}
+      <div className="mt-4 flex justify-center gap-2">
+        {items.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => {
+              const el = scrollRef.current;
+              if (!el) return;
+              const cardWidth = el.scrollWidth / items.length;
+              el.scrollTo({ left: cardWidth * i, behavior: "smooth" });
+            }}
+            className={`h-1.5 rounded-full transition-all duration-300 ${
+              i === active
+                ? "w-6 bg-gold"
+                : "w-1.5 bg-foreground/20"
+            }`}
+            aria-label={`Go to review ${i + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function ReviewCard({
+  review,
+  compact = false,
+  labels,
+}: {
+  review: { name: string; rating: number; text: string; image: string };
+  compact?: boolean;
+  labels?: { more: string; less: string };
+}) {
+  const [expanded, setExpanded] = useState(false);
+  const TEXT_LIMIT = 120;
+  const isLong = compact && review.text.length > TEXT_LIMIT;
+  const displayText = isLong && !expanded
+    ? review.text.slice(0, TEXT_LIMIT).trimEnd() + "..."
+    : review.text;
+
+  return (
+    <>
+      {/* Result photo */}
+      <div className={`relative overflow-hidden ${compact ? "aspect-[16/9]" : "aspect-[4/3]"}`}>
+        <Image
+          src={review.image}
+          alt={`${review.name}'s haircut`}
+          fill
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          sizes="(max-width: 768px) 80vw, (max-width: 1024px) 50vw, 33vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
+
+        {/* Stars */}
+        <div className="absolute bottom-3 left-4 flex gap-0.5">
+          {Array.from({ length: review.rating }).map((_, s) => (
+            <span key={s} className="text-sm text-gold drop-shadow-md">
+              &#9733;
+            </span>
+          ))}
+          {Array.from({ length: 5 - review.rating }).map((_, s) => (
+            <span key={s} className="text-sm text-foreground/20 drop-shadow-md">
+              &#9733;
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* Text */}
+      <div className={`relative ${compact ? "p-4" : "p-6"}`}>
+        <span className={`absolute right-4 font-display leading-none text-gold/10 ${compact ? "-top-2 text-4xl" : "-top-3 text-5xl"}`}>
+          &ldquo;
+        </span>
+        <p className={`relative mb-3 leading-relaxed text-foreground/60 ${compact ? "text-xs" : "text-sm"}`}>
+          {displayText}
+          {isLong && (
+            <button
+              onClick={() => setExpanded(!expanded)}
+              className="ml-1 text-gold/60 transition-colors hover:text-gold"
+            >
+              {expanded ? (labels?.less ?? "less") : (labels?.more ?? "more")}
+            </button>
+          )}
+        </p>
+        <p className="text-xs font-semibold uppercase tracking-[0.15em] text-gold/80">
+          {review.name}
+        </p>
+      </div>
+    </>
   );
 }

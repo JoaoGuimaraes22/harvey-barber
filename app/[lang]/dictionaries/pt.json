@@ -17,6 +17,7 @@
       { "id": "services", "label": "Serviços" },
       { "id": "before-after", "label": "Transformações" },
       { "id": "reviews", "label": "Avaliações" },
+      { "id": "team", "label": "Equipa" },
       { "id": "gallery", "label": "Galeria" },
       { "id": "contact", "label": "Contacto" }
     ]
@@ -98,6 +99,8 @@
   "reviews": {
     "badge": "O Que Dizem",
     "title": "Confiança de Gerações",
+    "more": "ver mais",
+    "less": "ver menos",
     "items": [
       {
         "name": "Akira",
@@ -128,11 +131,52 @@
         "rating": 4,
         "text": "Pessoal bastante profissional. Costumo lá ir desde já algum tempo e o cabelo fica sempre bem cortado. Convém ligar a marcar pois corre o risco de não conseguir ter vaga.",
         "image": "/reviews/review-5.webp"
+      },
+      {
+        "name": "Mariano Poggi",
+        "rating": 5,
+        "text": "Uma experiência incrível! Minha primeira vez no Harvey Cabeleireiro foi realmente fantástica. Ótimos cabeleireiros, ambiente super amigável e ótimo preço. Com certeza voltarei.",
+        "image": "/reviews/review-6.webp"
+      }
+    ]
+  },
+  "team": {
+    "badge": "A Equipa",
+    "title": "As Mãos Por Trás da Arte",
+    "members": [
+      {
+        "name": "Harvey",
+        "role": "Dono & Barbeiro Principal",
+        "description": "O homem por trás do nome. O Harvey gere esta barbearia há mais de 30 anos, recebendo pessoalmente cada cliente com simpatia e profissionalismo.",
+        "image": "/team/harvey.webp"
+      },
+      {
+        "name": "David",
+        "role": "Barbeiro Sénior",
+        "description": "Conhecido pelos clientes como 'o artista'. A precisão e habilidade do David conquistaram um público fiel — até salva cortes que outros não conseguem.",
+        "image": "/team/david.webp"
       }
     ]
   },
   "gallery": {
-    "title": "O Nosso Espaço"
+    "badge": "Galeria",
+    "title": "O Nosso Espaço",
+    "seeMore": "Ver Mais",
+    "seeLess": "Ver Menos",
+    "images": [
+      { "src": "/gallery/gallery-1.webp", "alt": "Interior da barbearia" },
+      { "src": "/gallery/gallery-2.webp", "alt": "Ferramentas de barbeiro" },
+      { "src": "/gallery/gallery-3.webp", "alt": "Barbeiro a trabalhar" },
+      { "src": "/gallery/gallery-4.webp", "alt": "Memorabilia de carros de cinema" },
+      { "src": "/gallery/gallery-5.webp", "alt": "Barbear com navalha" },
+      { "src": "/gallery/gallery-6.webp", "alt": "Exterior da barbearia" },
+      { "src": "/gallery/gallery-7.webp", "alt": "Resultado de degradê" },
+      { "src": "/gallery/gallery-8.webp", "alt": "Atmosfera ao pôr-do-sol" },
+      { "src": "/gallery/gallery-9.webp", "alt": "Detalhe da cadeira" },
+      { "src": "/gallery/gallery-10.webp", "alt": "Equipa a trabalhar" },
+      { "src": "/gallery/gallery-11.webp", "alt": "Cliente a cortar o cabelo" },
+      { "src": "/gallery/gallery-12.webp", "alt": "Detalhes do espaço" }
+    ]
   },
   "contact": {
     "badge": "Visite-nos",

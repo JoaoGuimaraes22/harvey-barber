@@ -17,6 +17,7 @@
       { "id": "services", "label": "Services" },
       { "id": "before-after", "label": "Transformations" },
       { "id": "reviews", "label": "Reviews" },
+      { "id": "team", "label": "Team" },
       { "id": "gallery", "label": "Gallery" },
       { "id": "contact", "label": "Contact" }
     ]
@@ -98,6 +99,8 @@
   "reviews": {
     "badge": "What They Say",
     "title": "Trusted for Generations",
+    "more": "more",
+    "less": "less",
     "items": [
       {
         "name": "Akira",
@@ -128,11 +131,52 @@
         "rating": 4,
         "text": "Very professional team. I've been going there for a while now and the hair always comes out great. Make sure to call ahead — you might not get a spot otherwise.",
         "image": "/reviews/review-5.webp"
+      },
+      {
+        "name": "Mariano Poggi",
+        "rating": 5,
+        "text": "An incredible experience! My first time at Harvey was truly fantastic. Great barbers, super friendly atmosphere, and great price. I'll definitely be back.",
+        "image": "/reviews/review-6.webp"
+      }
+    ]
+  },
+  "team": {
+    "badge": "The Team",
+    "title": "The Hands Behind the Craft",
+    "members": [
+      {
+        "name": "Harvey",
+        "role": "Owner & Master Barber",
+        "description": "The man behind the name. Harvey has been running this barbershop for over 30 years, personally welcoming every client with warmth and professionalism.",
+        "image": "/team/harvey.webp"
+      },
+      {
+        "name": "David",
+        "role": "Senior Barber",
+        "description": "Known by clients as 'the artist'. David's precision and skill have earned him a loyal following — even saving haircuts that others couldn't.",
+        "image": "/team/david.webp"
       }
     ]
   },
   "gallery": {
-    "title": "Inside Harvey"
+    "badge": "Gallery",
+    "title": "Inside Harvey",
+    "seeMore": "See More",
+    "seeLess": "Show Less",
+    "images": [
+      { "src": "/gallery/gallery-1.webp", "alt": "Barbershop interior" },
+      { "src": "/gallery/gallery-2.webp", "alt": "Barbershop tools" },
+      { "src": "/gallery/gallery-3.webp", "alt": "Barber at work" },
+      { "src": "/gallery/gallery-4.webp", "alt": "Movie car memorabilia" },
+      { "src": "/gallery/gallery-5.webp", "alt": "Straight razor shave" },
+      { "src": "/gallery/gallery-6.webp", "alt": "Barbershop exterior" },
+      { "src": "/gallery/gallery-7.webp", "alt": "Fresh fade result" },
+      { "src": "/gallery/gallery-8.webp", "alt": "Golden hour atmosphere" },
+      { "src": "/gallery/gallery-9.webp", "alt": "Barber chair detail" },
+      { "src": "/gallery/gallery-10.webp", "alt": "Team at work" },
+      { "src": "/gallery/gallery-11.webp", "alt": "Client getting a cut" },
+      { "src": "/gallery/gallery-12.webp", "alt": "Shop details" }
+    ]
   },
   "contact": {
     "badge": "Visit Us",

@@ -158,3 +158,12 @@ body {
 .animate-gallery-scroll-reverse {
   animation: gallery-scroll-reverse 35s linear infinite;
 }
+
+/* Hide scrollbar for slider */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

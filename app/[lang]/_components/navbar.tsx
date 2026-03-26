@@ -102,7 +102,7 @@ export default function Navbar({ dict, lang }: { dict: NavbarDict; lang: string 
       {/* Mobile menu */}
       <div
         className={`absolute left-0 right-0 top-full overflow-hidden bg-charcoal/98 backdrop-blur-xl transition-all duration-500 md:hidden ${
-          open ? "max-h-[28rem] border-b border-gold/10" : "max-h-0"
+          open ? "max-h-[100dvh] border-b border-gold/10" : "max-h-0"
         }`}
       >
         <div className="flex flex-col gap-1 px-6 py-6">

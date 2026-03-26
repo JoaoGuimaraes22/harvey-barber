@@ -6,6 +6,7 @@ import About from "./_components/about";
 import Services from "./_components/services";
 import BeforeAfter from "./_components/before-after";
 import Reviews from "./_components/reviews";
+import Team from "./_components/team";
 import Gallery from "./_components/gallery";
 import Contact from "./_components/contact";
 import Footer from "./_components/footer";
@@ -26,6 +27,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
         <Services dict={dict.services} />
         <BeforeAfter dict={dict.beforeAfter} />
         <Reviews dict={dict.reviews} />
+        <Team dict={dict.team} />
         <Gallery dict={dict.gallery} />
         <Contact dict={dict.contact} />
       </main>
