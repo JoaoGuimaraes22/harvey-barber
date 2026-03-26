@@ -2,7 +2,7 @@
   "metadata": {
     "name": "Harvey Cabeleireiro",
     "title": "Harvey Cabeleireiro | Cabeleireiro Masculino em Carcavelos",
-    "description": "Cabeleireiro masculino em Carcavelos com mais de 20 anos de história. Cortes de cabelo, barba e degradês num ambiente acolhedor e profissional. Marque já a sua vez.",
+    "description": "Cabeleireiro masculino em Carcavelos com mais de 30 anos de história. Cortes de cabelo, barba e degradês num ambiente acolhedor e profissional. Marque já a sua vez.",
     "phone": "+351 21 457 4652",
     "email": "",
     "address": "R. Dr. José Joaquim de Almeida 520-B, 2775-594 Carcavelos",
@@ -31,16 +31,16 @@
     "stats": [
       { "value": "4.8★", "label": "Avaliação Google" },
       { "value": "413+", "label": "Avaliações" },
-      { "value": "20+", "label": "Anos" }
+      { "value": "30+", "label": "Anos" }
     ]
   },
   "about": {
     "badge": "A Nossa História",
     "title": "Mais Do Que Um Cabeleireiro",
-    "description": "O Harvey Cabeleireiro não é apenas um sítio para cortar o cabelo — é onde gerações de homens confiam nas mesmas mãos para criar o seu visual. Com mais de 20 anos em Carcavelos, o Harvey e a sua equipa construíram algo raro: um cabeleireiro onde cada cliente se sente em família.",
+    "description": "O Harvey Cabeleireiro não é apenas um sítio para cortar o cabelo — é onde gerações de homens confiam nas mesmas mãos para criar o seu visual. Com mais de 30 anos em Carcavelos, o Harvey e a sua equipa construíram algo raro: um cabeleireiro onde cada cliente se sente em família.",
     "description2": "Entre e vai notar algo diferente. Ao lado das cadeiras de barbeiro clássicas e do som das máquinas, há uma coleção única de memorabilia de carros de cinema — um reflexo da personalidade do Harvey e do carácter único deste espaço.",
     "features": [
-      { "value": "20+", "label": "Anos de Experiência" },
+      { "value": "30+", "label": "Anos de Experiência" },
       { "value": "413+", "label": "Clientes Satisfeitos" },
       { "value": "4.8", "label": "Avaliação Google" }
     ]
@@ -108,7 +108,7 @@
       {
         "name": "Jorge Martinho",
         "rating": 5,
-        "text": "O único cabeleireiro que vou desde há mais de 20 anos. Aqui é certo! Saímos sempre com o cabelo bem cortado! Não se esqueçam, funciona com marcação!",
+        "text": "O único cabeleireiro que vou desde há mais de 30 anos. Aqui é certo! Saímos sempre com o cabelo bem cortado! Não se esqueçam, funciona com marcação!",
         "image": "/reviews/review-2.webp"
       },
       {

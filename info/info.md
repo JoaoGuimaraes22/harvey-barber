@@ -48,7 +48,7 @@
 
 ## About / Story
 
-Harvey Cabeleireiro is a long-established men's barbershop in Carcavelos, known for its loyal clientele — many customers have been coming for 10, 15, even 20+ years. The owner Harvey personally oversees the shop, welcoming clients with warmth and professionalism. The team, including barber David (known for exceptional skill), delivers consistently high-quality cuts in a friendly, relaxed atmosphere. The shop features a distinctive car movie memorabilia collection. They work by appointment but do their best to accommodate walk-ins.
+Harvey Cabeleireiro is a men's barbershop that has been operating in Carcavelos for over 30 years. Their mission is client well-being, care, and attention. Known for its loyal clientele — many customers have been coming for 10, 15, even 20+ years. The owner Harvey personally oversees the shop, welcoming clients with warmth and professionalism. The team, including barber David (known for exceptional skill), delivers consistently high-quality cuts in a friendly, relaxed atmosphere. The shop features a distinctive car movie memorabilia collection. They work by appointment but do their best to accommodate walk-ins.
 
 ## Reviews / Testimonials
 
