@@ -1,15 +1,171 @@
 {
   "metadata": {
-    "name": "Nome do Negócio",
-    "title": "Nome do Negócio | Cidade",
-    "description": "Bem-vindo ao meu site.",
-    "phone": "",
+    "name": "Harvey Cabeleireiro",
+    "title": "Harvey Cabeleireiro | Cabeleireiro Masculino em Carcavelos",
+    "description": "Cabeleireiro masculino em Carcavelos com mais de 20 anos de história. Cortes de cabelo, barba e degradês num ambiente acolhedor e profissional. Marque já a sua vez.",
+    "phone": "+351 21 457 4652",
     "email": "",
-    "address": "",
+    "address": "R. Dr. José Joaquim de Almeida 520-B, 2775-594 Carcavelos",
     "type": "LocalBusiness"
   },
+  "navbar": {
+    "brand": "Harvey",
+    "cta": "Marcar",
+    "ctaPhone": "tel:+351214574652",
+    "links": [
+      { "id": "about", "label": "Sobre" },
+      { "id": "services", "label": "Serviços" },
+      { "id": "before-after", "label": "Transformações" },
+      { "id": "reviews", "label": "Avaliações" },
+      { "id": "gallery", "label": "Galeria" },
+      { "id": "contact", "label": "Contacto" }
+    ]
+  },
+  "hero": {
+    "titleLine1": "Arte.",
+    "titleLine2": "Carácter.",
+    "titleLine3": "Tradição.",
+    "tagline": "Cabeleireiro masculino em Carcavelos — onde cada corte conta uma história",
+    "cta": "Marque a Sua Vez",
+    "ctaPhone": "tel:+351214574652",
+    "stats": [
+      { "value": "4.8★", "label": "Avaliação Google" },
+      { "value": "413+", "label": "Avaliações" },
+      { "value": "20+", "label": "Anos" }
+    ]
+  },
+  "about": {
+    "badge": "A Nossa História",
+    "title": "Mais Do Que Um Cabeleireiro",
+    "description": "O Harvey Cabeleireiro não é apenas um sítio para cortar o cabelo — é onde gerações de homens confiam nas mesmas mãos para criar o seu visual. Com mais de 20 anos em Carcavelos, o Harvey e a sua equipa construíram algo raro: um cabeleireiro onde cada cliente se sente em família.",
+    "description2": "Entre e vai notar algo diferente. Ao lado das cadeiras de barbeiro clássicas e do som das máquinas, há uma coleção única de memorabilia de carros de cinema — um reflexo da personalidade do Harvey e do carácter único deste espaço.",
+    "features": [
+      { "value": "20+", "label": "Anos de Experiência" },
+      { "value": "413+", "label": "Clientes Satisfeitos" },
+      { "value": "4.8", "label": "Avaliação Google" }
+    ]
+  },
+  "services": {
+    "badge": "O Que Fazemos",
+    "title": "Os Nossos Serviços",
+    "items": [
+      {
+        "title": "Corte de Cabelo",
+        "description": "Cortes clássicos e modernos à medida do seu estilo. De degradês a cortes à tesoura, a nossa equipa garante precisão sempre.",
+        "image": "/services/haircut.webp"
+      },
+      {
+        "title": "Degradê",
+        "description": "Degradês impecáveis com transições perfeitas. A nossa especialidade — de skin fades a mid fades, sempre afiado.",
+        "image": "/services/fade.webp"
+      },
+      {
+        "title": "Barba",
+        "description": "Modelagem e manutenção de barba. Linhas limpas, contorno adequado, acabamento cuidado.",
+        "image": "/services/beard.webp"
+      },
+      {
+        "title": "Lavagem",
+        "description": "Lavagem e tratamento capilar relaxante. O complemento perfeito para qualquer corte.",
+        "image": "/services/wash.webp"
+      }
+    ],
+    "cta": "Marque a Sua Vez",
+    "ctaPhone": "tel:+351214574652",
+    "priceNote": "A partir de 10€"
+  },
+  "beforeAfter": {
+    "badge": "Transformações",
+    "title": "A Diferença Está no Detalhe",
+    "items": [
+      {
+        "before": "/before-after/before-1.webp",
+        "after": "/before-after/after-1.webp",
+        "label": "Degradê Clássico"
+      },
+      {
+        "before": "/before-after/before-2.webp",
+        "after": "/before-after/after-2.webp",
+        "label": "Barba Esculpida"
+      },
+      {
+        "before": "/before-after/before-3.webp",
+        "after": "/before-after/after-3.webp",
+        "label": "Transformação Completa"
+      }
+    ]
+  },
+  "reviews": {
+    "badge": "O Que Dizem",
+    "title": "Confiança de Gerações",
+    "items": [
+      {
+        "name": "Akira",
+        "rating": 5,
+        "text": "Encontrar um cabeleireiro que nos deixe satisfeitos da primeira vez e todas as vezes seguintes é uma tarefa herculiana. Desde que encontrei o Harvey que a procura terminou. Extremamente competentes e educados. Super recomendo a todos os homens, seja pra corte ou manutenção de barba.",
+        "image": "/reviews/review-1.webp"
+      },
+      {
+        "name": "Jorge Martinho",
+        "rating": 5,
+        "text": "O único cabeleireiro que vou desde há mais de 20 anos. Aqui é certo! Saímos sempre com o cabelo bem cortado! Não se esqueçam, funciona com marcação!",
+        "image": "/reviews/review-2.webp"
+      },
+      {
+        "name": "Pedro L.G",
+        "rating": 5,
+        "text": "Esta casa já tem muita história em Carcavelos e tem-se mantido e evoluído cada vez mais. A preços muito razoáveis, têm realmente muita atenção ao cliente, com um dono especialmente atencioso.",
+        "image": "/reviews/review-3.webp"
+      },
+      {
+        "name": "João Moura",
+        "rating": 5,
+        "text": "Muito profissional e muito eficiente. O facto de se poder fazer reserva antecipada permite poupar muito tempo. Sou cliente há mais de 10 anos.",
+        "image": "/reviews/review-4.webp"
+      },
+      {
+        "name": "António Guimarães",
+        "rating": 5,
+        "text": "Simplesmente impecável. Há 4 anos que aqui venho. Não confio em mais ninguém para este trabalho.",
+        "image": "/reviews/review-5.webp"
+      }
+    ]
+  },
+  "gallery": {
+    "title": "O Nosso Espaço"
+  },
+  "contact": {
+    "badge": "Visite-nos",
+    "title": "Marque a Sua Vez",
+    "description": "Funcionamos com marcação — ligue para reservar o seu horário. Walk-ins aceites quando disponível.",
+    "phone": "+351 21 457 4652",
+    "phoneLink": "tel:+351214574652",
+    "phoneCta": "Ligar para Marcar",
+    "address": "R. Dr. José Joaquim de Almeida 520-B, 2775-594 Carcavelos",
+    "mapsEmbed": "https://www.google.com/maps?cid=7254508616474128342&output=embed",
+    "mapsLink": "https://maps.google.com/?cid=7254508616474128342",
+    "instagram": "https://instagram.com/harveycabeleireiro",
+    "hours": [
+      { "day": "Segunda", "time": "09:00–13:00, 15:00–20:00" },
+      { "day": "Terça", "time": "09:00–13:00, 15:00–20:00" },
+      { "day": "Quarta", "time": "09:00–13:00, 15:00–20:00" },
+      { "day": "Quinta", "time": "09:00–13:00, 15:00–20:00" },
+      { "day": "Sexta", "time": "09:00–13:00, 15:00–20:00" },
+      { "day": "Sábado", "time": "09:00–13:00, 15:00–19:00" },
+      { "day": "Domingo", "time": "Encerrado" }
+    ]
+  },
+  "footer": {
+    "brand": "Harvey",
+    "tagline": "Cabeleireiro masculino em Carcavelos desde o primeiro dia.",
+    "phone": "+351 21 457 4652",
+    "address": "R. Dr. José Joaquim de Almeida 520-B, 2775-594 Carcavelos",
+    "instagram": "https://instagram.com/harveycabeleireiro",
+    "mapsLink": "https://maps.google.com/?cid=7254508616474128342",
+    "copyright": "Harvey Cabeleireiro. Todos os direitos reservados."
+  },
   "home": {
-    "title": "Bem-vindo",
-    "description": "Este e o ponto de partida do seu projeto. Edite esta pagina para comecar."
+    "title": "Harvey Cabeleireiro",
+    "description": "Cabeleireiro masculino em Carcavelos — onde a lealdade encontra a arte."
   }
 }

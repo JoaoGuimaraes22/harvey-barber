@@ -1,15 +1,171 @@
 {
   "metadata": {
-    "name": "Business Name",
-    "title": "Business Name | City",
-    "description": "Welcome to my site.",
-    "phone": "",
+    "name": "Harvey Cabeleireiro",
+    "title": "Harvey Cabeleireiro | Men's Barbershop in Carcavelos",
+    "description": "Men's barbershop in Carcavelos with 20+ years of history. Expert haircuts, beard trims, and fades in a warm, welcoming atmosphere. Book your appointment today.",
+    "phone": "+351 21 457 4652",
     "email": "",
-    "address": "",
+    "address": "R. Dr. José Joaquim de Almeida 520-B, 2775-594 Carcavelos",
     "type": "LocalBusiness"
   },
+  "navbar": {
+    "brand": "Harvey",
+    "cta": "Book Now",
+    "ctaPhone": "tel:+351214574652",
+    "links": [
+      { "id": "about", "label": "About" },
+      { "id": "services", "label": "Services" },
+      { "id": "before-after", "label": "Transformations" },
+      { "id": "reviews", "label": "Reviews" },
+      { "id": "gallery", "label": "Gallery" },
+      { "id": "contact", "label": "Contact" }
+    ]
+  },
+  "hero": {
+    "titleLine1": "Craft.",
+    "titleLine2": "Character.",
+    "titleLine3": "Tradition.",
+    "tagline": "Men's barbershop in Carcavelos — where every cut tells a story",
+    "cta": "Book Your Cut",
+    "ctaPhone": "tel:+351214574652",
+    "stats": [
+      { "value": "4.8★", "label": "Google Rating" },
+      { "value": "413+", "label": "Reviews" },
+      { "value": "20+", "label": "Years" }
+    ]
+  },
+  "about": {
+    "badge": "Our Story",
+    "title": "More Than a Barbershop",
+    "description": "Harvey Cabeleireiro isn't just a place to get a haircut — it's where generations of men have trusted the same hands to craft their look. With over 20 years in Carcavelos, Harvey and his team have built something rare: a barbershop where every client feels like family.",
+    "description2": "Step inside and you'll notice something different. Alongside the classic barber chairs and the buzz of clippers, there's a curated collection of movie car memorabilia — a reflection of Harvey's personality and the shop's unique character.",
+    "features": [
+      { "value": "20+", "label": "Years of Experience" },
+      { "value": "413+", "label": "Happy Clients" },
+      { "value": "4.8", "label": "Google Rating" }
+    ]
+  },
+  "services": {
+    "badge": "What We Do",
+    "title": "Our Services",
+    "items": [
+      {
+        "title": "Haircut",
+        "description": "Classic and modern cuts tailored to your style. From fades to scissor cuts, our team delivers precision every time.",
+        "image": "/services/haircut.webp"
+      },
+      {
+        "title": "Fade Cut",
+        "description": "Clean degradês with seamless blending. Our specialty — from skin fades to mid fades, always sharp.",
+        "image": "/services/fade.webp"
+      },
+      {
+        "title": "Beard Trim",
+        "description": "Sculpted beard shaping and maintenance. Clean lines, proper contouring, finished with care.",
+        "image": "/services/beard.webp"
+      },
+      {
+        "title": "Hair Wash",
+        "description": "Relaxing wash and conditioning treatment. The perfect complement to any cut.",
+        "image": "/services/wash.webp"
+      }
+    ],
+    "cta": "Book Your Cut",
+    "ctaPhone": "tel:+351214574652",
+    "priceNote": "Starting from €10"
+  },
+  "beforeAfter": {
+    "badge": "Transformations",
+    "title": "The Difference Is in the Detail",
+    "items": [
+      {
+        "before": "/before-after/before-1.webp",
+        "after": "/before-after/after-1.webp",
+        "label": "Classic Fade"
+      },
+      {
+        "before": "/before-after/before-2.webp",
+        "after": "/before-after/after-2.webp",
+        "label": "Beard Sculpt"
+      },
+      {
+        "before": "/before-after/before-3.webp",
+        "after": "/before-after/after-3.webp",
+        "label": "Full Restyle"
+      }
+    ]
+  },
+  "reviews": {
+    "badge": "What They Say",
+    "title": "Trusted for Generations",
+    "items": [
+      {
+        "name": "Akira",
+        "rating": 5,
+        "text": "Finding a barber who gets it right the first time and every time after is near impossible. Since I found Harvey, the search is over. Extremely competent and welcoming. Highly recommend for any man, whether for a cut or beard trim.",
+        "image": "/reviews/review-1.webp"
+      },
+      {
+        "name": "Jorge Martinho",
+        "rating": 5,
+        "text": "The only barbershop I've been going to for over 20 years. You always leave with a great cut. Don't forget — they work by appointment!",
+        "image": "/reviews/review-2.webp"
+      },
+      {
+        "name": "Pedro L.G",
+        "rating": 5,
+        "text": "This place has a lot of history in Carcavelos and keeps evolving. Very reasonable prices, great attention to the client, with an especially attentive owner.",
+        "image": "/reviews/review-3.webp"
+      },
+      {
+        "name": "João Moura",
+        "rating": 5,
+        "text": "Very professional and efficient. Being able to book in advance saves a lot of time. I've been a client for over 10 years.",
+        "image": "/reviews/review-4.webp"
+      },
+      {
+        "name": "António Guimarães",
+        "rating": 5,
+        "text": "Simply impeccable. I've been coming here for 4 years. I don't trust anyone else for this job.",
+        "image": "/reviews/review-5.webp"
+      }
+    ]
+  },
+  "gallery": {
+    "title": "Inside Harvey"
+  },
+  "contact": {
+    "badge": "Visit Us",
+    "title": "Book Your Appointment",
+    "description": "We work by appointment — call us to reserve your slot. Walk-ins welcome when available.",
+    "phone": "+351 21 457 4652",
+    "phoneLink": "tel:+351214574652",
+    "phoneCta": "Call to Book",
+    "address": "R. Dr. José Joaquim de Almeida 520-B, 2775-594 Carcavelos",
+    "mapsEmbed": "https://www.google.com/maps?cid=7254508616474128342&output=embed",
+    "mapsLink": "https://maps.google.com/?cid=7254508616474128342",
+    "instagram": "https://instagram.com/harveycabeleireiro",
+    "hours": [
+      { "day": "Monday", "time": "09:00–13:00, 15:00–20:00" },
+      { "day": "Tuesday", "time": "09:00–13:00, 15:00–20:00" },
+      { "day": "Wednesday", "time": "09:00–13:00, 15:00–20:00" },
+      { "day": "Thursday", "time": "09:00–13:00, 15:00–20:00" },
+      { "day": "Friday", "time": "09:00–13:00, 15:00–20:00" },
+      { "day": "Saturday", "time": "09:00–13:00, 15:00–19:00" },
+      { "day": "Sunday", "time": "Closed" }
+    ]
+  },
+  "footer": {
+    "brand": "Harvey",
+    "tagline": "Men's barbershop in Carcavelos since day one.",
+    "phone": "+351 21 457 4652",
+    "address": "R. Dr. José Joaquim de Almeida 520-B, 2775-594 Carcavelos",
+    "instagram": "https://instagram.com/harveycabeleireiro",
+    "mapsLink": "https://maps.google.com/?cid=7254508616474128342",
+    "copyright": "Harvey Cabeleireiro. All rights reserved."
+  },
   "home": {
-    "title": "Welcome",
-    "description": "This is the starting point of your project. Edit this page to get started."
+    "title": "Harvey Cabeleireiro",
+    "description": "Men's barbershop in Carcavelos — where loyalty meets craft."
   }
 }

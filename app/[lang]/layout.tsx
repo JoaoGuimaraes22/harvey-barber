@@ -1,18 +1,22 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Playfair_Display, Outfit } from "next/font/google";
 import "../globals.css";
 import { i18n } from "@/i18n-config";
 import { getDictionary, hasLocale } from "./dictionaries";
 import { notFound } from "next/navigation";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
   subsets: ["latin"],
+  weight: ["400", "700", "900"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const outfit = Outfit({
+  variable: "--font-outfit",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
 });
 
 const SITE_URL =
@@ -119,7 +123,7 @@ export default async function RootLayout({
   return (
     <html
       lang={lang}
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${playfair.variable} ${outfit.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <a
