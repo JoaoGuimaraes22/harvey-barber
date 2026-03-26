@@ -148,7 +148,7 @@ export default function Contact({ dict }: { dict: ContactDict }) {
                 rel="noopener noreferrer"
                 className="text-foreground/60 transition-colors duration-200 hover:text-gold"
               >
-                {dict.instagram}
+                @{dict.instagram.replace(/https?:\/\/(www\.)?instagram\.com\//, "")}
               </a>
             </div>
 

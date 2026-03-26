@@ -124,9 +124,9 @@
         "image": "/reviews/review-4.webp"
       },
       {
-        "name": "António Guimarães",
-        "rating": 5,
-        "text": "Simply impeccable. I've been coming here for 4 years. I don't trust anyone else for this job.",
+        "name": "Vitor Sancho",
+        "rating": 4,
+        "text": "Very professional team. I've been going there for a while now and the hair always comes out great. Make sure to call ahead — you might not get a spot otherwise.",
         "image": "/reviews/review-5.webp"
       }
     ]
@@ -158,6 +158,14 @@
   "footer": {
     "brand": "Harvey",
     "tagline": "Men's barbershop in Carcavelos since day one.",
+    "linksTitle": "Links",
+    "links": [
+      { "id": "about", "label": "About" },
+      { "id": "services", "label": "Services" },
+      { "id": "gallery", "label": "Gallery" },
+      { "id": "contact", "label": "Contact" }
+    ],
+    "contactTitle": "Contact",
     "phone": "+351 21 457 4652",
     "address": "R. Dr. José Joaquim de Almeida 520-B, 2775-594 Carcavelos",
     "instagram": "https://instagram.com/harveycabeleireiro",

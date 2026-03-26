@@ -1,6 +1,9 @@
 type FooterDict = {
   brand: string;
   tagline: string;
+  linksTitle: string;
+  links: { id: string; label: string }[];
+  contactTitle: string;
   phone: string;
   address: string;
   instagram: string;
@@ -32,51 +35,33 @@ export default function Footer({ dict }: { dict: FooterDict }) {
           {/* Quick links */}
           <div>
             <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-gold">
-              Links
+              {dict.linksTitle}
             </h4>
             <nav className="flex flex-col gap-2.5">
-              <a
-                href="#about"
-                className="text-sm text-foreground/50 transition-colors duration-200 hover:text-gold"
-              >
-                About
-              </a>
-              <a
-                href="#services"
-                className="text-sm text-foreground/50 transition-colors duration-200 hover:text-gold"
-              >
-                Services
-              </a>
-              <a
-                href="#gallery"
-                className="text-sm text-foreground/50 transition-colors duration-200 hover:text-gold"
-              >
-                Gallery
-              </a>
-              <a
-                href="#contact"
-                className="text-sm text-foreground/50 transition-colors duration-200 hover:text-gold"
-              >
-                Contact
-              </a>
+              {dict.links.map((link) => (
+                <a
+                  key={link.id}
+                  href={`#${link.id}`}
+                  className="text-sm text-foreground/50 transition-colors duration-200 hover:text-gold"
+                >
+                  {link.label}
+                </a>
+              ))}
             </nav>
           </div>
 
           {/* Contact info */}
           <div>
             <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-gold">
-              Contact
+              {dict.contactTitle}
             </h4>
             <div className="flex flex-col gap-3">
-              {/* Phone */}
               <a
                 href={`tel:${dict.phone.replace(/\s/g, "")}`}
                 className="text-sm text-foreground/50 transition-colors duration-200 hover:text-gold"
               >
                 {dict.phone}
               </a>
-
-              {/* Address */}
               <a
                 href={dict.mapsLink}
                 target="_blank"
@@ -85,15 +70,13 @@ export default function Footer({ dict }: { dict: FooterDict }) {
               >
                 {dict.address}
               </a>
-
-              {/* Instagram */}
               <a
                 href={dict.instagram.startsWith("http") ? dict.instagram : `https://instagram.com/${dict.instagram.replace("@", "")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-foreground/50 transition-colors duration-200 hover:text-gold"
               >
-                {dict.instagram}
+                @harveycabeleireiro
               </a>
             </div>
           </div>

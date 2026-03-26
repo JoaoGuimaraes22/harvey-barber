@@ -124,9 +124,9 @@
         "image": "/reviews/review-4.webp"
       },
       {
-        "name": "António Guimarães",
-        "rating": 5,
-        "text": "Simplesmente impecável. Há 4 anos que aqui venho. Não confio em mais ninguém para este trabalho.",
+        "name": "Vitor Sancho",
+        "rating": 4,
+        "text": "Pessoal bastante profissional. Costumo lá ir desde já algum tempo e o cabelo fica sempre bem cortado. Convém ligar a marcar pois corre o risco de não conseguir ter vaga.",
         "image": "/reviews/review-5.webp"
       }
     ]
@@ -158,6 +158,14 @@
   "footer": {
     "brand": "Harvey",
     "tagline": "Cabeleireiro masculino em Carcavelos desde o primeiro dia.",
+    "linksTitle": "Ligações",
+    "links": [
+      { "id": "about", "label": "Sobre" },
+      { "id": "services", "label": "Serviços" },
+      { "id": "gallery", "label": "Galeria" },
+      { "id": "contact", "label": "Contacto" }
+    ],
+    "contactTitle": "Contacto",
     "phone": "+351 21 457 4652",
     "address": "R. Dr. José Joaquim de Almeida 520-B, 2775-594 Carcavelos",
     "instagram": "https://instagram.com/harveycabeleireiro",
