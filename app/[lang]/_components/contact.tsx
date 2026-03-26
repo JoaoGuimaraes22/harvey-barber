@@ -143,7 +143,7 @@ export default function Contact({ dict }: { dict: ContactDict }) {
                 <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none" />
               </svg>
               <a
-                href={`https://instagram.com/${dict.instagram.replace("@", "")}`}
+                href={dict.instagram.startsWith("http") ? dict.instagram : `https://instagram.com/${dict.instagram.replace("@", "")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground/60 transition-colors duration-200 hover:text-gold"

@@ -88,7 +88,7 @@ export default function Footer({ dict }: { dict: FooterDict }) {
 
               {/* Instagram */}
               <a
-                href={`https://instagram.com/${dict.instagram.replace("@", "")}`}
+                href={dict.instagram.startsWith("http") ? dict.instagram : `https://instagram.com/${dict.instagram.replace("@", "")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-foreground/50 transition-colors duration-200 hover:text-gold"
