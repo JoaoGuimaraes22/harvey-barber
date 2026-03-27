@@ -9,6 +9,7 @@ type AboutDict = {
   title: string;
   description: string;
   description2: string;
+  image: string;
   features: { value: string; label: string }[];
 };
 
@@ -123,7 +124,7 @@ export default function About({ dict }: { dict: AboutDict }) {
           >
             <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
               <Image
-                src="/about/about-1.webp"
+                src={dict.image}
                 alt="Harvey Cabeleireiro interior"
                 fill
                 className="object-cover"

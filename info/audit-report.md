@@ -3,83 +3,75 @@ _Generated: 2026-03-26_
 
 ## 🔴 Critical (must fix before launch)
 
-- [ ] **metadata.email is empty** — EN: `""`, PT: `""`. No email address for the business. Need to get from client or confirm they don't use email.
-- [ ] **Review images are AI-generated** — `/reviews/review-1..5.webp` are AI placeholders, not real client photos. Replace with real post-service photos when available.
-- [ ] **Before/after images are AI-generated** — `/before-after/*.webp` are AI placeholders. Replace with real transformation photos from the barbershop.
-- [ ] **Footer hardcoded in English** — Footer headings "Links" and "Contact" and link labels ("About", "Services", "Gallery", "Contact") are not from dict, they show English text on the PT page too.
+- [ ] `metadata.email` is empty `""` — no email for JSON-LD structured data. Get from client or confirm phone-only.
+- [ ] `metadata.type` is `"LocalBusiness"` — should be `"BarberShop"` for richer schema.org markup
+- [ ] All images are AI-generated — need real photos from client (team, shop interior, services, before-after, reviews, gallery). This is the single biggest trust gap.
 
 ## 🟡 Warning (should verify with client)
 
-- [ ] **All 5 reviews are 5-star** — Real reviews from Google Maps, but all selected are 5/5. Consider including the 4-star reviews for authenticity.
-- [ ] **"20+ Years" stat is unverified** — Reviews mention 20+ years of loyalty but the exact founding year is unknown. Confirm with client.
-- [ ] **Service pricing incomplete** — Only "Starting from €10" confirmed. Get full price list from client for each service.
-- [ ] **Hero/about/services/gallery images are AI-generated** — All images are AI placeholders. Replace with real photography when client provides photos.
-- [ ] **EN reviews are translated, not original** — The EN dict has translated versions of originally Portuguese reviews. Consider keeping originals with a translation toggle, or noting they're translated.
+- [ ] `services.priceNote` "Starting from €10" — only €10 clipper cut confirmed. Get full price list from client.
+- [ ] `about.features` "413+ Happy Clients" uses review count as client count — verify or rephrase
+- [ ] `hero.stats` "30+ Years" — exact founding year unknown per populate report. Verify with Harvey.
+- [ ] `team` has 2 members — confirm no other barbers work at the shop
+- [ ] EN reviews are translated from Portuguese originals — acceptable but consider noting "translated from Google Reviews"
+- [ ] No `NEXT_PUBLIC_GOOGLE_REVIEW_URL` env var — no Google Review CTA on site
+- [ ] No `NEXT_PUBLIC_FORMSPREE_ID` — bookings are phone-only (likely intentional for a barbershop)
 
 ## 🟢 Info (nice to have)
 
-- [ ] **No email in metadata** — flagged in populate report as missing from info.md. Business may not use email (appointment by phone only).
-- [ ] **Logo exists but not used in navbar** — `public/logo.png` exists but navbar uses text "Harvey." instead. Consider using logo image.
-- [ ] **No team section** — David "the artist" is mentioned in reviews and about text but there's no dedicated team section. Could add when client provides team photos/bios.
+- [ ] No FAQ section — could add common questions (appointment policy, pricing, walk-in availability)
+- [ ] No pricing section — explicit prices could help SEO and user expectations
+- [ ] `og-image.jpg` is AI-generated (111KB) — replace with real photo of the shop for social sharing
+- [ ] `logo.png` exists in public root but navbar uses text brand — could use logo image instead
+- [ ] Instagram link uses `instagram.com` not `www.instagram.com` — works but non-canonical
+- [ ] No statsCounters section — stats are inline in hero/about, a dedicated section could reinforce trust
 
 ## ✅ Passing
 
 ### Data Parity (EN ↔ PT)
-- [x] metadata.phone: identical ✅
-- [x] metadata.address: identical ✅
-- [x] metadata.email: identical (both empty) ✅
-- [x] navbar.ctaPhone: identical ✅
-- [x] hero.ctaPhone: identical ✅
-- [x] hero.stats values: identical ✅
-- [x] about.features values: identical ✅
-- [x] services.items images: identical ✅
-- [x] services.ctaPhone: identical ✅
-- [x] beforeAfter.items images: identical ✅
-- [x] reviews.items images: identical ✅
-- [x] reviews.items names: identical ✅
-- [x] reviews.items ratings: identical ✅
-- [x] contact.phone: identical ✅
-- [x] contact.phoneLink: identical ✅
-- [x] contact.address: identical ✅
-- [x] contact.mapsEmbed: identical ✅
-- [x] contact.mapsLink: identical ✅
-- [x] contact.instagram: identical ✅
-- [x] footer.phone: identical ✅
-- [x] footer.address: identical ✅
-- [x] footer.instagram: identical ✅
-- [x] footer.mapsLink: identical ✅
+All 24 non-translatable field groups checked — **zero mismatches**:
+- metadata (phone, email, address, type) ✅
+- navbar (brand, ctaPhone, link IDs) ✅
+- hero (ctaPhone, stats values) ✅
+- about (feature values) ✅
+- services (image paths, ctaPhone) ✅
+- beforeAfter (image paths) ✅
+- reviews (names, ratings, image paths) ✅
+- team (names, image paths) ✅
+- gallery (image src paths) ✅
+- contact (phone, phoneLink, address, mapsEmbed, mapsLink, instagram, hour times) ✅
+- footer (phone, address, instagram, mapsLink, link IDs) ✅
 
 ### Images
-- [x] All 25 dict-referenced images exist in public/
-- [x] All images are WebP optimized
-- [x] hero-video.mp4 present (client-provided)
-- [x] og-image.jpg present (1909KB)
-- [x] favicon.ico present
-- [x] apple-touch-icon.png present
-- [x] site.webmanifest present
-- [x] logo.png present
+- [x] 30/30 dict-referenced images exist in public/ ✅
+- [x] All images are WebP optimized ✅
+- [x] hero-video.mp4 present ✅
+- [x] og-image.jpg present (111KB, not placeholder) ✅
+- [x] favicon.ico present (15KB, custom) ✅
+- [x] apple-touch-icon.png present ✅
+- [x] site.webmanifest present ✅
+- [x] logo.png present ✅
 
 ### SEO
 - [x] metadata.name: "Harvey Cabeleireiro" ✅
-- [x] metadata.type: "LocalBusiness" ✅
-- [x] NEXT_PUBLIC_SITE_URL set: https://harvey-orcin.vercel.app ✅
-- [x] Google Maps embed URL is real CID (not placeholder) ✅
+- [x] NEXT_PUBLIC_SITE_URL: https://harvey-barber.vercel.app ✅
+- [x] Google Maps embed URL uses real CID ✅
 
 ### Content
-- [x] Reviews are real (from Google Maps scrape, 4-5 stars only)
-- [x] Contact hours match Google Maps listing
-- [x] Address matches Google Maps listing
-- [x] Phone matches Google Maps listing
+- [x] 6 real reviews from Google Maps (mix of 4★ and 5★) ✅
+- [x] Hours match Google Maps listing (incl. lunch break + Saturday difference) ✅
+- [x] Phone consistent across all sections ✅
+- [x] Address consistent across all sections ✅
+- [x] Footer headings are dict-driven and translated ✅
 
 ## 📊 Summary
-- **4 critical issues** (empty email, AI images x2, footer not translated)
-- **5 warnings** (all-5-star reviews, unverified stats, incomplete pricing, AI images, translated reviews)
-- **3 info items** (no email, unused logo, no team section)
+- **3 critical issues** (empty email, schema type, AI images)
+- **7 warnings** (pricing, stats, team size, reviews, env vars)
+- **6 info items** (FAQ, pricing section, og-image, logo, instagram URL, statsCounters)
 - **0 images missing**
-- **33 images/assets present**
-- **23 data parity checks passed**
+- **30+ images/assets present**
 
 ### Top 3 to fix first:
-1. **Translate footer** — hardcoded English on PT page is visible to users
-2. **Get real photos from client** — AI images are placeholders; real photos will dramatically improve trust
-3. **Get full price list** — only one price confirmed, clients want to know costs upfront
+1. **Get real photos from client** — AI images are the biggest trust gap; real photos will transform the site
+2. **Update metadata.type to "BarberShop"** — quick fix, better SEO schema
+3. **Get full price list** — clients want to know costs before calling

@@ -7,6 +7,8 @@ import { motion } from "motion/react";
 type Dict = {
   badge: string;
   title: string;
+  beforeLabel: string;
+  afterLabel: string;
   items: {
     before: string;
     after: string;
@@ -16,8 +18,12 @@ type Dict = {
 
 function Slider({
   item,
+  beforeLabel,
+  afterLabel,
 }: {
   item: { before: string; after: string; label: string };
+  beforeLabel: string;
+  afterLabel: string;
 }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState(50);
@@ -64,7 +70,7 @@ function Slider({
         {/* After image (full, background) */}
         <Image
           src={item.after}
-          alt="After"
+          alt={afterLabel}
           fill
           className="object-cover"
           sizes="(max-width: 900px) 100vw, 900px"
@@ -78,7 +84,7 @@ function Slider({
         >
           <Image
             src={item.before}
-            alt="Before"
+            alt={beforeLabel}
             fill
             className="object-cover"
             sizes="(max-width: 900px) 100vw, 900px"
@@ -101,7 +107,7 @@ function Slider({
           }}
         >
           <span className="rounded-l-md bg-background/80 px-2 py-1 text-[10px] font-bold uppercase tracking-widest text-foreground/80 backdrop-blur-sm">
-            Before
+            {beforeLabel}
           </span>
           <div className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-gold bg-background/80 backdrop-blur-sm">
             <svg
@@ -121,16 +127,16 @@ function Slider({
             </svg>
           </div>
           <span className="rounded-r-md bg-background/80 px-2 py-1 text-[10px] font-bold uppercase tracking-widest text-foreground/80 backdrop-blur-sm">
-            After
+            {afterLabel}
           </span>
         </div>
 
         {/* Corner labels */}
         <span className="pointer-events-none absolute top-4 left-4 z-10 rounded bg-background/70 px-2.5 py-1 text-[10px] font-bold uppercase tracking-widest text-foreground/70 backdrop-blur-sm">
-          Before
+          {beforeLabel}
         </span>
         <span className="pointer-events-none absolute top-4 right-4 z-10 rounded bg-background/70 px-2.5 py-1 text-[10px] font-bold uppercase tracking-widest text-foreground/70 backdrop-blur-sm">
-          After
+          {afterLabel}
         </span>
       </div>
 
@@ -186,7 +192,7 @@ export default function BeforeAfter({ dict }: { dict: Dict }) {
                 ease: [0.16, 1, 0.3, 1],
               }}
             >
-              <Slider item={item} />
+              <Slider item={item} beforeLabel={dict.beforeLabel} afterLabel={dict.afterLabel} />
             </motion.div>
           ))}
         </div>

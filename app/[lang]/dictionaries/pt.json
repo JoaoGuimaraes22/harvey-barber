@@ -38,6 +38,7 @@
   "about": {
     "badge": "A Nossa História",
     "title": "Mais Do Que Um Cabeleireiro",
+    "image": "/about/about-1.webp",
     "description": "O Harvey Cabeleireiro não é apenas um sítio para cortar o cabelo — é onde gerações de homens confiam nas mesmas mãos para criar o seu visual. Com mais de 30 anos em Carcavelos, o Harvey e a sua equipa construíram algo raro: um cabeleireiro onde cada cliente se sente em família.",
     "description2": "Entre e vai notar algo diferente. Ao lado das cadeiras de barbeiro clássicas e do som das máquinas, há uma coleção única de memorabilia de carros de cinema — um reflexo da personalidade do Harvey e do carácter único deste espaço.",
     "features": [
@@ -78,6 +79,8 @@
   "beforeAfter": {
     "badge": "Transformações",
     "title": "A Diferença Está no Detalhe",
+    "beforeLabel": "Antes",
+    "afterLabel": "Depois",
     "items": [
       {
         "before": "/before-after/before-1.webp",
