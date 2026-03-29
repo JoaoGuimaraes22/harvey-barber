@@ -12,7 +12,7 @@ const cspHeader = `
   base-uri 'self';
   form-action 'self';
   frame-src 'self' https://www.google.com https://maps.google.com;
-  frame-ancestors 'self' https://surgex.pt https://*.vercel.app;
+  frame-ancestors 'self' https://surgex.pt https://www.surgex.pt https://*.vercel.app;
   upgrade-insecure-requests;
 `;
 
